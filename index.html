@@ -2,36 +2,81 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Fernando Salazar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fernando Salazar | Arte Contemporáneo</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fff;
       margin: 0;
-      padding: 0;
-      text-align: center;
+      font-family: 'Georgia', serif;
+      background-color: #fff;
+      color: #222;
     }
+
     header {
-      background-color: #333;
-      color: white;
-      padding: 2rem;
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #ddd;
     }
-    .galeria {
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-style: italic;
+      color: #555;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 2rem;
+      gap: 1rem;
     }
-    .galeria img {
+
+    .gallery img {
       max-width: 300px;
-      margin: 1rem;
-      border: 2px solid #ccc;
-      border-radius: 8px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
+
+    .about, .contact {
+      text-align: center;
+    }
+
     footer {
-      background: #eee;
-      padding: 1rem;
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #f1f1f1;
       font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
@@ -39,17 +84,40 @@
 
   <header>
     <h1>Fernando Salazar</h1>
-    <p>Bienvenido a mi galería de arte</p>
+    <p>Arte Contemporáneo | Elegancia y expresión visual</p>
+    <nav>
+      <a href="#galeria">Galería</a>
+      <a href="#sobremi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <section class="galeria">
-    <img src="https://via.placeholder.com/300x400?text=Obra+1" alt="Obra 1">
-    <img src="https://via.placeholder.com/300x400?text=Obra+2" alt="Obra 2">
-    <img src="https://via.placeholder.com/300x400?text=Obra+3" alt="Obra 3">
+  <section id="galeria" class="section">
+    <h2>Galería</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x400?text=Obra+1" alt="Obra 1">
+      <img src="https://via.placeholder.com/300x400?text=Obra+2" alt="Obra 2">
+      <img src="https://via.placeholder.com/300x400?text=Obra+3" alt="Obra 3">
+    </div>
+  </section>
+
+  <section id="sobremi" class="section about">
+    <h2>Sobre mí</h2>
+    <p>
+      Soy Fernando Salazar, artista visual enfocado en el arte contemporáneo.  
+      Mi obra explora la interacción entre forma, espacio y percepción, con un enfoque estético clásico y minimalista.  
+      Cada pieza es una invitación a la contemplación y al diálogo silencioso con el espectador.
+    </p>
+  </section>
+
+  <section id="contacto" class="section contact">
+    <h2>Contacto</h2>
+    <p>📧 fernando.salazar5803@gmail.com</p>
+    <p>📸n@fernandos.art <a href="https://instagram.com/fernandosalazar.art" target="_blank">@fernandosalazar.art</a></p>
   </section>
 
   <footer>
-    <p>Contacto: fernando.salazar5803@gmail.com | Instagram: @fernandos.art</p>
+    © 2025 Fernando Salazar · Portafolio de arte contemporáneo
   </footer>
 
 </body>
