@@ -1,2 +1,2 @@
-# Fernan2art.github.io
+# FernandoSalazar.github.io
 Arte
