@@ -113,7 +113,7 @@ form button:hover {
 
 .slide-track {
   display: flex;
-  width: calc(250px * 10);/*.*/
+  width: calc(250px * 10);/*250px*10*/
   animation: scroll 30s linear infinite;
 }
 
