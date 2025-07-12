@@ -16,6 +16,90 @@
         </nav>
     </header>
     <main>
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de Pinturas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f8f8f8;
+    }
+
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .item {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .item:hover {
+      transform: scale(1.03);
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .descripcion {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Catálogo de Pinturas</h1>
+
+  <div class="catalogo">
+
+    <div class="item">
+      <img src="Arte1.jpg" alt="Pintura 1">
+      <div class="descripcion">"Título 1" - Técnica mixta</div>
+    </div>
+
+    <div class="item">
+      <img src="Arte2.jpg" alt="Pintura 2">
+      <div class="descripcion">"Título 2" - Acrílico sobre lienzo</div>
+    </div>
+
+    <div class="item">
+      <img src="Arte3.jpg" alt="Pintura 3">
+      <div class="descripcion">"Título 3" - Óleo sobre tabla</div>
+    </div>
+
+    <div class="item">
+      <img src="Arte4.jpg" alt="Pintura 4">
+      <div class="descripcion">"Título 4" - Acuarela</div>
+    </div>
+
+    <div class="item">
+      <img src="Arte5.jpg" alt="Pintura 5">
+      <div class="descripcion">"Título 5" - Tinta y grafito</div>
+    </div>
+
+    <div class="item">
+      <img src="imagen6.jpg" alt="Pintura 6">
+      <div class="descripcion">"Título 6" - Collage digital</div>
+    </div>
+
+    <!-- Puedes seguir agregando más elementos aquí -->
+  </div>
+
+</body>
+</html>
         <section class="categoria">
             <h2>Artes Visuales</h2>
             <img src="Arte5.jpg" alt="Arte Visual" />
