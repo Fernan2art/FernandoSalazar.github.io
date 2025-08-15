@@ -1,195 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Catálogo de Arte</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo | Fernando Salazar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f8f9fa;
       margin: 0;
-      padding: 40px;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: #00bfff;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    main {
+      padding: 30px;
     }
 
     h2 {
-      margin-top: 60px;
-      border-left: 4px solid #333;
-      padding-left: 10px;
-      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
     }
 
-    .gallery {
+    .catalogo-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 20px;
-      margin-top: 20px;
     }
 
-    .image-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .image-card img {
-      width: 100%;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-
-    .image-card:hover img {
-      transform: scale(1.05);
-    }
-
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      padding-top: 80px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.85);
-    }
-
-    .modal-content {
-      margin: auto;
-      background: #fff;
-      padding: 20px;
-      max-width: 800px;
-      border-radius: 10px;
+    .item {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       text-align: center;
     }
 
-    .modal-content img {
-      width: 100%;
-      max-height: 500px;
-      object-fit: contain;
-      border-radius: 8px;
+    .item img {
+      max-width: 100%;
+      height: auto;
     }
 
-    .modal-description {
-      margin-top: 15px;
-      font-size: 16px;
+    .item p {
+      font-size: 14px;
+      margin-top: 10px;
       color: #444;
     }
 
-    .close {
-      position: absolute;
-      top: 30px;
-      right: 50px;
+    footer {
+      background-color: #111;
       color: #fff;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
+      text-align: center;
+      padding: 20px 10px;
     }
 
-    @media(max-width: 768px){
-      .modal-content {
-        width: 90%;
-      }
+    footer a {
+      color: #00bfff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffd700;
+    }
+
+    .icono-red {
+      font-size: 22px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    .correo {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Categoría: Artes Visuales -->
-  <h2>Artes Visuales</h2>
-  <div class="gallery">
-    <div class="image-card" onclick="openModal('img/Arte1.jpg', 'Obra de técnica mixta en lienzo')">
-      <img src="img/arte1.jpg" alt="Arte visual 1">
-<div class="image-card" onclick="openModal('img/Arte2.jpg', 'Obra de técnica mixta en lienzo')">
-      <img src="img/Arte2.jpg" alt="Arte visual 2">
-<div class="image-card" onclick="openModal('img/arte3.jpg', 'Obra de técnica mixta en lienzo')">
-      <img src="img/arte3.jpg" alt="Arte visual 3">
+  <header>
+    <h1>Fernando Salazar</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
 
+  <main>
+    <h2>Catálogo de Obras</h2>
+    <section class="catalogo-grid">
+      <!-- Repite este bloque para cada obra -->
+      <div class="item">
+        <img src="obra1.jpg" alt="Obra 1">
+        <p>Título de la obra 1</p>
+      </div>
+      <div class="item">
+        <img src="obra2.jpg" alt="Obra 2">
+        <p>Título de la obra 2</p>
+      </div>
+      <div class="item">
+        <img src="obra3.jpg" alt="Obra 3">
+        <p>Título de la obra 3</p>
+      </div>
+      <div class="item">
+        <img src="obra4.jpg" alt="Obra 4">
+        <p>Título de la obra 4</p>
+      </div>
+      <div class="item">
+        <img src="obra5.jpg" alt="Obra 5">
+        <p>Título de la obra 5</p>
+      </div>
+      <div class="item">
+        <img src="obra6.jpg" alt="Obra 6">
+        <p>Título de la obra 6</p>
+      </div>
+      <div class="item">
+        <img src="obra7.jpg" alt="Obra 7">
+        <p>Título de la obra 7</p>
+      </div>
+      <div class="item">
+        <img src="obra8.jpg" alt="Obra 8">
+        <p>Título de la obra 8</p>
+      </div>
+      <!-- Agrega más bloques si necesitas -->
+    </section>
+  </main>
+
+  <footer>
+    <span class="correo">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:fernando.salazar5803@gmail.com">fernando.salazar5803@gmail.com</a>
+    </span>
+    <div class="redes-sociales">
+      <a href="https://instagram.com/fernandos.art" target="_blank" title="Instagram">
+        <i class="fab fa-instagram icono-red"></i> @fernandos.art
+      </a>
     </div>
-    <div class="image-card" onclick="openModal('img/arte4.jpg', 'Escultura contemporánea')">
-      <img src="img/arte4.jpg" alt="Arte visual 2">
-    </div>
-  </div>
-
-  <!-- Categoría: Performance -->
-  <h2>Performance</h2>
-  <div class="gallery">
-    <div class="image-card" onclick="openModal('img/Perfo1.jpg', 'Acto en vivo con interacción del público')">
-      <img src="img/Perfo1.jpg" alt="Performance 1">
-    <div class="image-card" onclick="openModal('img/Perfo2.jpg', 'Acto en vivo con interacción del público')">
-      <img src="img/Perfo3.jpg" alt="Performance 1">
-    <div class="image-card" onclick="openModal('img/Perfo3.jpg', 'Acto en vivo con interacción del público')">
-      <img src="img/Perfo3.jpg" alt="Performance 1">
-    <div class="image-card" onclick="openModal('img/Perfo4.jpg', 'Acto en vivo con interacción del público')">
-      <img src="img/Perfo4.jpg" alt="Performance 1">
-    <div class="image-card" onclick="openModal('img/Perfo2.jpg', 'Acto en vivo con interacción del público')">
-
-
-
-      <img src="img/Perfo2.jpg" alt="Performance 1">
-
-    </div>
-  </div>
-
-  <!-- Categoría: Fotografía -->
-  <h2>Fotografía</h2>
-  <div class="gallery">
-    <div class="image-card" onclick="openModal('img/Foto1.jpg', 'Captura en blanco y negro de un instante urbano')">
-      <img src="img/Foto1.jpg" alt="Foto 1">
-    <div class="image-card" onclick="openModal('img/Foto2.jpg', 'Captura en blanco y negro de un instante urbano')">
-      <img src="img/Foto2.jpg" alt="Foto 1">
-  <div class="image-card" onclick="openModal('img/Foto3.jpg', 'Captura en blanco y negro de un instante urbano')">
-      <img src="img/Foto3.jpg" alt="Foto 1">
-  <div class="image-card" onclick="openModal('img/Foto4.jpg', 'Captura en blanco y negro de un instante urbano')">
-      <img src="img/Foto4.jpg" alt="Foto 1">
-
-
-    </div>
-  </div>
-
-  <!-- Categoría: Ilustración -->
-  <h2>Ilustración</h2>
-  <div class="gallery">
-    <div class="image-card" onclick="openModal('img/Ilu1.jpg', 'Ilustración digital de paisaje surrealista')">
-      <img src="img/Ilu1.jpg" alt="Ilustración 1">
-    <div class="image-card" onclick="openModal('img/Ilu2.jpg', 'Ilustración digital de paisaje surrealista')">
-      <img src="img/Ilu2.jpg" alt="Ilustración 1">
-<div class="image-card" onclick="openModal('img/Ilu3.jpg', 'Ilustración digital de paisaje surrealista')">
-      <img src="img/Ilu3.jpg" alt="Ilustración 1">
-<div class="image-card" onclick="openModal('img/Ilu4.jpg', 'Ilustración digital de paisaje surrealista')">
-      <img src="img/Ilu4.jpg" alt="Ilustración 1">
-
-
-
-    </div>
-  </div>
-
-  <!-- Modal -->
-  <div id="myModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-      <img id="modalImage" src="" alt="">
-      <div class="modal-description" id="modalText"></div>
-    </div>
-  </div>
-
-  <script>
-    function openModal(imgSrc, description) {
-      document.getElementById("myModal").style.display = "block";
-      document.getElementById("modalImage").src = imgSrc;
-      document.getElementById("modalText").innerText = description;
-    }
-
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-  </script>
+    <p style="margin-top: 15px;">&copy; 2025 Fernando Salazar. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
