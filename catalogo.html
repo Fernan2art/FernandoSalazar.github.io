@@ -267,6 +267,32 @@
   <img class="lightbox-imagen" src="" alt="imagen ampliada">
 </div>
 
+  <script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.querySelector('.lightbox-imagen');
+  const closeBtn = document.querySelector('.cerrar');
+
+  document.querySelectorAll('.item img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    }
+  });
+</script>
+
+
 </body>
 </html>
 
